@@ -1,5 +1,6 @@
 alert('js loaded');
-document.getEelementById('punishment-button').onClick = function pButton()
+document.getElementById("punishment-button").onClick = function pButton()
 {
-     document.getEelementById('punishment').innerHTML = "test";
+     alert('click!');
+     document.getElementById("punishment").innerHTML = "red";
 }
