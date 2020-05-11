@@ -1,4 +1,4 @@
-document.getElementById("punishment-button").onClick = function pButton() {
+function pButton() {
      alert('click!');
      document.getElementById("punishment").innerHTML = "red";
 }
