@@ -1,4 +1,4 @@
-alert('js loaded');
+
 window.onLoad = function()
 {
      document.getElementById("punishment-button").onClick = function pButton()
