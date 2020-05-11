@@ -1,7 +1,10 @@
-function pButton() {
-     alert('click!');
-     document.getElementById("punishment").innerHTML = "red";
+window.onload = function() {
+     function pButton() {
+          alert('click!');
+          document.getElementById("punishment").innerHTML = "red";
+     }
+
+
+     document.getElementById ("punishment-button").addEventListener ("click", pButton, false);
+
 }
-
-
-document.getElementById ("punishment-button").addEventListener ("click", pButton, false);
