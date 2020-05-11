@@ -1,7 +1,7 @@
 window.onload = function() {
 
      function pButton() {
-          
+
           var punishments =
           [
                "Go to world 302 and spam buying combat bracelet until someone sells you one.",
@@ -18,7 +18,6 @@ window.onload = function() {
 
           var randomPunishment = punishments[Math.floor(Math.random()*punishments.length)];
 
-          alert('click!');
           document.getElementById("punishment").innerHTML = randomPunishment;
      }
 
