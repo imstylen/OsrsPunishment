@@ -1,6 +1,8 @@
-window.onload = function() {
+window.onload = function()
+{
 
-     function pButton() {
+     function pButton()
+     {
 
           var punishments =
           [
@@ -15,9 +17,45 @@ window.onload = function() {
                "Mine for 10 minutes.",
                "Go to chaos dwarves in a populated world. Kill one and say 'sit'.",
                "Ask someone with a pet when summoning was released.",
+               "Give %teammate% 100k",
+               "Repair a set of %teammate% ('s) barrows armor",
+               "Do a trip at vorkath, and give all the loot to %teammate%"
           ]
 
-          var randomPunishment = punishments[Math.floor(Math.random()*punishments.length)];
+          var punishmentText = "";
+
+          var teammateString = document.getElementById("teammates").value;
+
+          var randomPunishment;
+
+          if(teammateString != "")
+          {
+               randomPunishment = punishments[Math.floor(Math.random()*punishments.length)];
+               teammateArr = teammateString.split(",");
+               punishmentWordArr = randomPunishment.split(" ");
+
+               var x;
+               for (x in punishmentWordArr)
+               {
+                    if (punishmentWordArr[x] == "%teammate%")
+                    {
+                         punishmentWordArr[x] = teammateArr[Math.floor(Math.random()*teammateArr.length)];
+                    }
+               }
+
+               randomPunishment = punishmentWordArr.join(" ");
+          }
+          else
+          {
+
+               var lookAgain = true;
+               while(lookAgain)
+               {
+                    randomPunishment = punishments[Math.floor(Math.random()*punishments.length)];
+                    lookAgain = randomPunishment.includes("%teammate%");
+               }
+
+          }
 
           document.getElementById("punishment").innerHTML = randomPunishment;
      }
