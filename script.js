@@ -27,7 +27,7 @@ window.onload = function()
                "Crash a team at corp while wearing really bad gear, but suicide before the kill is over. (Bonus points if you ask for split before you die.)",
                "Go to god wars dungeon, and ask people for god items so you dont die.",
                "Tell someone in really good gear: 'Nice combat bracelet, noob'",
-               "Buy a lumbridge tele from someone in lubridge bank."
+               "Buy a lumbridge tele from someone in lubridge bank.",
           ]
 
           var punishmentText = "";
