@@ -19,7 +19,10 @@ window.onload = function()
                "Ask someone with a pet when summoning was released.",
                "Give %teammate% 100k",
                "Repair a set of %teammate% ('s) barrows armor",
-               "Do a trip at vorkath, and give all the loot to %teammate%"
+               "Do a trip at vorkath, and give all the loot to %teammate%",
+               "Run from edgville to mage bank without the lever.",
+               "Chop 10 of the highest tier logs you can with a bronze axe",
+               "Suicide at wintertodt while autochatting 'The cold never bothered me anyway'."
           ]
 
           var punishmentText = "";
