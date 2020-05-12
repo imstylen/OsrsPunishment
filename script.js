@@ -19,7 +19,15 @@ window.onload = function()
                "Ask someone with a pet when summoning was released.",
                "Give %teammate% 100k",
                "Repair a set of %teammate% ('s) barrows armor",
-               "Do a trip at vorkath, and give all the loot to %teammate%"
+               "Do #2-5# Vorkath kills, and give all the loot to %teammate%",
+               "Give %teammate% #20-200# k.",
+               "Trade someone killing cows #10-50# k, and then say scammed and run away",
+               "Sell %teammate% your current stack of superior dragon bones for #75-90# % price",
+               "%teammate% picks your punishment",
+               "Crash a team at corp while wearing really bad gear, but suicide before the kill is over. (Bonus points if you ask for split before you die.)",
+               "Go to god wars dungeon, and ask people for god items so you dont die.",
+               "Tell someone in really good gear: 'Nice combat bracelet, noob'",
+               "Buy a lumbridge tele from someone in lubridge bank."
           ]
 
           var punishmentText = "";
@@ -56,6 +64,25 @@ window.onload = function()
                }
 
           }
+
+          punishmentWordArr = randomPunishment.split(" ");
+          var x;
+          for (x in punishmentWordArr)
+          {
+               if (punishmentWordArr[x].charAt(0) == "#" && punishmentWordArr[x].charAt(punishmentWordArr[x].length - 1) == "#")
+               {
+                    punishmentWordArr[x] = punishmentWordArr[x].replace(/#/g,"");
+                    boundArr = punishmentWordArr[x].split("-");
+                    lowerBound = parseInt(boundArr[0]);
+                    upperBound = parseInt(boundArr[1]);
+
+                    randomN = Math.floor(Math.random()*(upperBound - lowerBound+1)) + lowerBound;
+
+                    punishmentWordArr[x] = randomN.toString();
+               }
+          }
+
+          randomPunishment = punishmentWordArr.join(" ");
 
           document.getElementById("punishment").innerHTML = randomPunishment;
      }
