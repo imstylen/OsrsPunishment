@@ -22,7 +22,8 @@ window.onload = function()
                "Do a trip at vorkath, and give all the loot to %teammate%",
                "Run from edgville to mage bank without the lever.",
                "Chop 10 of the highest tier logs you can with a bronze axe",
-               "Suicide at wintertodt while autochatting 'The cold never bothered me anyway'."
+               "Suicide at wintertodt while autochatting 'The cold never bothered me anyway'.",
+               "Add a new punishment, and roll again.. noob"
           ]
 
           var punishmentText = "";
